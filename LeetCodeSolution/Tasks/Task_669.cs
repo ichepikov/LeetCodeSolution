@@ -1,19 +1,9 @@
 ﻿using System;
+using LeetCodeSolution.DataStructures;
 using LeetCodeSolution.Interfaces;
 
 namespace LeetCodeSolution.Tasks
 {
-    public class TreeNode
-    {
-        public int val;
-        public TreeNode left;
-        public TreeNode right;
-
-        public TreeNode(int x)
-        {
-            val = x;
-        }
-    }
 
     public class Task_669 : ITask<Tuple<TreeNode, int, int>, TreeNode>
     {
