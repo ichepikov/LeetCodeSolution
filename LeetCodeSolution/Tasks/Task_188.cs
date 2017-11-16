@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using LeetCodeSolution.Interfaces;
 
 namespace LeetCodeSolution.Tasks
@@ -27,62 +24,49 @@ namespace LeetCodeSolution.Tasks
             {
                 var dif = prices[i] - prices[i - 1];
 
-                if (dif < 0)
+                if ((dif <= 0 && interval <= 0) || (dif >= 0 && interval >= 0))
                 {
-                    if (interval <= 0)
-                    {
+                    if (interval != 0 || dif > 0)
                         interval += dif;
-                    }
-                    else
-                    {
-                        intervals.Add(interval);
-                        interval = dif;
-                    }
                 }
-                else if (dif > 0)
+                else
                 {
-                    if (interval >= 0)
-                    {
-                        interval += dif;
-                    }
-                    else
-                    {
-                        intervals.Add(interval);
-                        interval = dif;
-                    }
+                    intervals.Add(interval);
+                    interval = dif;
                 }
             }
 
             if (interval == 0)
                 return 0;
 
-            intervals.Add(interval);
+            if (interval > 0)
+                intervals.Add(interval);
 
-            if (intervals[0] < 0)
-                intervals.RemoveAt(0);
-
-            if (intervals.Count > 0 && intervals[intervals.Count - 1] < 0)
-                intervals.RemoveAt(intervals.Count - 1);
 
             var sum = 0;
-
             for (int i = 0; i < intervals.Count; i = i + 2)
                 sum += intervals[i];
 
-            var intervalsToRemove = (intervals.Count / 2 - k) + 1;
 
-
+            var intervalsToRemove = (intervals.Count / 2) - k + 1;
 
             for (int i = 0; i < intervalsToRemove; i++)
             {
-                var minInterval = intervals.Select(Math.Abs).Min();
-                var index = intervals.IndexOf(minInterval);
-                if (index < 0)
-                    index = intervals.IndexOf(-minInterval);
+                var index = 0;
+                var minInterval = intervals[0];
+                for (int j = 1; j < intervals.Count; j++)
+                {
+                    var current = Math.Abs(intervals[j]);
+                    if (minInterval > current)
+                    {
+                        minInterval = current;
+                        index = j;
+                    }
+                }
 
                 if (index == 0)
                 {
-                    intervals.RemoveAt(1);
+                    intervals.RemoveAt(0);
                     intervals.RemoveAt(0);
                 }
                 else if (index == intervals.Count - 1)
@@ -95,8 +79,7 @@ namespace LeetCodeSolution.Tasks
                     var newItem = intervals[index - 1] + intervals[index] + intervals[index + 1];
                     intervals.RemoveAt(index - 1);
                     intervals.RemoveAt(index - 1);
-                    intervals.RemoveAt(index - 1);
-                    intervals.Insert(index - 1, newItem);
+                    intervals[index - 1] = newItem;
                 }
 
                 sum -= minInterval;

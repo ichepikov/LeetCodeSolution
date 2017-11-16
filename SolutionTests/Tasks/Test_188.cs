@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using LeetCodeSolution.Tasks;
 using Xunit;
 
@@ -6,76 +7,60 @@ namespace SolutionTests.Tasks
 {
     public class Test_188
     {
-        [Fact]
-        public void TestMethodNoTransactions()
-        {
-            var tasksolution = new Task_188();
-            int result = tasksolution.Run(new Tuple<int, int[]>(0, new[] {10, 100, 5, 200}));
+        private readonly Task_188 _tasksolution;
 
-            Assert.Equal(0, result);
+        public Test_188()
+        {
+            _tasksolution = new Task_188();
         }
 
-        [Fact]
-        public void TestMethodEmptyStock()
+        [Theory]
+        [MemberData(nameof(GetEdgeCasesData))]
+        public void EdgeCasesTests(Tuple<int, int[]> input, int output)
         {
-            var tasksolution = new Task_188();
-            int result = tasksolution.Run(new Tuple<int, int[]>(1, new int[0]));
-
-            Assert.Equal(0, result);
+            var result = _tasksolution.Run(input);
+            Assert.Equal(output, result);
         }
 
-        [Fact]
-        public void TestMethodOneStock()
+        [Theory]
+        [MemberData(nameof(GetCommonCasesData))]
+        public void CommonTests(Tuple<int, int[]> input, int output)
         {
-            var tasksolution = new Task_188();
-            int result = tasksolution.Run(new Tuple<int, int[]>(1, new[] {10}));
-
-            Assert.Equal(0, result);
+            var result = _tasksolution.Run(input);
+            Assert.Equal(output, result);
         }
 
-        [Fact]
-        public void TestMethodNoChanges()
+        public static IEnumerable<object[]> GetEdgeCasesData()
         {
-            var tasksolution = new Task_188();
-            int result = tasksolution.Run(new Tuple<int, int[]>(1, new[] {10, 10}));
+            yield return GetDataItem(0, new[] {10, 100, 5, 200}, 0);
 
-            Assert.Equal(0, result);
+            yield return GetDataItem(1, new int[0], 0);
+
+            yield return GetDataItem(1, new[] {10}, 0);
+
+            yield return GetDataItem(1, new[] {10, 10}, 0);
         }
 
-        [Fact]
-        public void TestMethod()
+        public static IEnumerable<object[]> GetCommonCasesData()
         {
-            var tasksolution = new Task_188();
-            int result = tasksolution.Run(new Tuple<int, int[]>(1, new[] {10, 100, 5, 200}));
+            yield return GetDataItem(1, new[] {10, 100, 5, 200}, 195);
 
-            Assert.Equal(195, result);
+            yield return GetDataItem(2, new[] {10, 100, 5, 200}, 285);
+
+            yield return GetDataItem(3, new[] {10, 100, 5, 200}, 285);
+
+            yield return GetDataItem(2, new[] {1, 2, 4, 2, 5, 7, 2, 4, 9, 0, 9}, 17);
+
+            yield return GetDataItem(2, new[] {5, 2, 3, 2, 6, 6, 2, 9, 1, 0, 7, 4, 5, 0}, 14);
         }
 
-        [Fact]
-        public void TestMethod2()
+        private static object[] GetDataItem(int k, int[] prices, int output)
         {
-            var tasksolution = new Task_188();
-            int result = tasksolution.Run(new Tuple<int, int[]>(2, new[] {10, 100, 5, 200}));
-
-            Assert.Equal(285, result);
-        }
-
-        [Fact]
-        public void TestMethod3()
-        {
-            var tasksolution = new Task_188();
-            int result = tasksolution.Run(new Tuple<int, int[]>(2, new[] {1, 2, 4, 2, 5, 7, 2, 4, 9, 0, 9}));
-
-            Assert.Equal(17, result);
-        }
-
-        [Fact]
-        public void TestMethod4()
-        {
-            var tasksolution = new Task_188();
-            int result = tasksolution.Run(new Tuple<int, int[]>(2, new[] {5, 2, 3, 2, 6, 6, 2, 9, 1, 0, 7, 4, 5, 0}));
-
-            Assert.Equal(14, result);
+            return new object[]
+            {
+                new Tuple<int, int[]>(k, prices),
+                output
+            };
         }
     }
 }
