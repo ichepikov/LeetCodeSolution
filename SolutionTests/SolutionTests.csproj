@@ -55,6 +55,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Tasks\TaskTestBase.cs" />
     <Compile Include="Tasks\Test_188.cs" />
     <Compile Include="Tasks\Test_347.cs" />
     <Compile Include="Tasks\Test_513.cs" />
