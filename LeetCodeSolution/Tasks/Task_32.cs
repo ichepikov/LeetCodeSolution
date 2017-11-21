@@ -8,8 +8,7 @@ namespace LeetCodeSolution.Tasks
         {
             return LongestValidParentheses(input);
         }
-
-
+        
         public int LongestValidParentheses(string s)
         {
             var result = 0;

@@ -4,19 +4,16 @@ using Xunit;
 
 namespace SolutionTests.Tasks
 {
-    public class Test_513
+    public class Test_513 : TaskTestBase<TreeNode, int>
     {
-        private readonly Task_513 _tasksolution;
-
-        public Test_513()
+        public Test_513() : base(new Task_513())
         {
-            _tasksolution = new Task_513();
         }
 
         [Fact]
         public void TestMethod()
         {
-            int result = _tasksolution.Run(new TreeNode(100)
+            var rootNode = new TreeNode(100)
             {
                 left = new TreeNode(3)
                 {
@@ -33,10 +30,9 @@ namespace SolutionTests.Tasks
                         }
                     }
                 }
-            });
+            };
 
-
-            Assert.Equal(104, result);
+            RunTest(rootNode, 104);
         }
     }
 }

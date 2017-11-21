@@ -4,7 +4,6 @@ using LeetCodeSolution.Interfaces;
 
 namespace LeetCodeSolution.Tasks
 {
-
     public class Task_669 : ITask<Tuple<TreeNode, int, int>, TreeNode>
     {
         public TreeNode Run(Tuple<TreeNode, int, int> input)

@@ -10,7 +10,7 @@ namespace LeetCodeSolution.Tasks
         {
             return CountDigitOne(input);
         }
-        
+
         public int CountDigitOne(int n)
         {
             var sum = 0;
@@ -34,15 +34,6 @@ namespace LeetCodeSolution.Tasks
             }
 
             return sum;
-        }
-
-        private IEnumerable<int> GetIntArray(int num)
-        {
-            while (num > 0)
-            {
-                yield return num % 10;
-                num = num / 10;
-            }
         }
     }
 

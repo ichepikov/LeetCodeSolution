@@ -12,7 +12,6 @@ namespace LeetCodeSolution.Tasks
 
     public class AllOne
     {
-
         private readonly LinkedList<Element> _orderedList = new LinkedList<Element>();
 
         private readonly Dictionary<string, LinkedListNode<Element>> _dictionary =
