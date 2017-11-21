@@ -2,8 +2,12 @@
 
 namespace LeetCodeSolution.Tasks
 {
-    class Task_432
+    public class Task_432
     {
+        public AllOne GetTestClass()
+        {
+            return new AllOne();
+        }
     }
 
     public class AllOne
@@ -41,7 +45,7 @@ namespace LeetCodeSolution.Tasks
             }
             else
             {
-                var node = new LinkedListNode<Element>(new Element(key));
+                var node = new LinkedListNode<Element>(new Element(key) {Counter = 1});
                 _orderedList.AddFirst(node);
                 _dictionary[key] = node;
             }
