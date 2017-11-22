@@ -13,7 +13,7 @@ namespace SolutionTests.Tasks
 
         [Theory]
         [MemberData(nameof(GetTestCasesData))]
-        public void EdgeCasesTests(Tuple<int[], int> input, IList<int> output)
+        public void CommonTests(Tuple<int[], int> input, IList<int> output)
         {
             RunTest(input, output);
         }
