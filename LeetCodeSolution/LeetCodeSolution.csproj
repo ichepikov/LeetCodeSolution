@@ -46,11 +46,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Algorithms\BinaryTreeTraversalExtension.cs" />
+    <Compile Include="DataStructures\OrderedKeyCounterCollection.cs" />
     <Compile Include="DataStructures\ListNode.cs" />
     <Compile Include="DataStructures\TreeNode.cs" />
     <Compile Include="DataStructures\TreeNodeBase.cs" />
     <Compile Include="Interfaces\ITask.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tasks\Task_124.cs" />
     <Compile Include="Tasks\Task_160.cs" />
     <Compile Include="Tasks\Task_188.cs" />
     <Compile Include="Tasks\Task_23.cs" />
@@ -62,6 +64,7 @@
     <Compile Include="Tasks\Task_513.cs" />
     <Compile Include="Tasks\Task_6.cs" />
     <Compile Include="Tasks\Task_669.cs" />
+    <Compile Include="Tasks\Task_692.cs" />
     <Compile Include="Tasks\Task_7.cs" />
   </ItemGroup>
   <ItemGroup>
