@@ -58,9 +58,11 @@
     <Compile Include="Tasks\Task_23.cs" />
     <Compile Include="Tasks\Task_233.cs" />
     <Compile Include="Tasks\Task_32.cs" />
+    <Compile Include="Tasks\Task_327.cs" />
     <Compile Include="Tasks\Task_347.cs" />
     <Compile Include="Tasks\Task_4.cs" />
     <Compile Include="Tasks\Task_432.cs" />
+    <Compile Include="Tasks\Task_49.cs" />
     <Compile Include="Tasks\Task_513.cs" />
     <Compile Include="Tasks\Task_6.cs" />
     <Compile Include="Tasks\Task_669.cs" />
