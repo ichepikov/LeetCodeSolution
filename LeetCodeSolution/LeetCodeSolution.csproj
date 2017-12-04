@@ -53,6 +53,7 @@
     <Compile Include="Interfaces\ITask.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tasks\Task_124.cs" />
+    <Compile Include="Tasks\Task_151.cs" />
     <Compile Include="Tasks\Task_160.cs" />
     <Compile Include="Tasks\Task_188.cs" />
     <Compile Include="Tasks\Task_23.cs" />
