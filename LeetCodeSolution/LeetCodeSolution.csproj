@@ -71,6 +71,7 @@
     <Compile Include="Tasks\Task_669.cs" />
     <Compile Include="Tasks\Task_692.cs" />
     <Compile Include="Tasks\Task_7.cs" />
+    <Compile Include="Tasks\Task_78.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
