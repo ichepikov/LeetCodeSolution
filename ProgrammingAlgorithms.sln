@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeetCodeSolution", "LeetCodeSolution\LeetCodeSolution.csproj", "{B123B67A-2D39-4D95-8BEB-768F224FB3CD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructures", "DataStructures\DataStructures.csproj", "{B58CD783-8B68-4818-A1BD-8B4C09CC8B4F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algorithms", "Algorithms\Algorithms.csproj", "{B3A81C4B-19CF-4356-875E-8CB400D0A039}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeetCodeSolutionTests", "LeetCodeSolutionTests\LeetCodeSolutionTests.csproj", "{20316A6A-849B-447A-A783-8F28638B2F5D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B123B67A-2D39-4D95-8BEB-768F224FB3CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B123B67A-2D39-4D95-8BEB-768F224FB3CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B123B67A-2D39-4D95-8BEB-768F224FB3CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B123B67A-2D39-4D95-8BEB-768F224FB3CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B58CD783-8B68-4818-A1BD-8B4C09CC8B4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B58CD783-8B68-4818-A1BD-8B4C09CC8B4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B58CD783-8B68-4818-A1BD-8B4C09CC8B4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B58CD783-8B68-4818-A1BD-8B4C09CC8B4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3A81C4B-19CF-4356-875E-8CB400D0A039}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3A81C4B-19CF-4356-875E-8CB400D0A039}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3A81C4B-19CF-4356-875E-8CB400D0A039}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3A81C4B-19CF-4356-875E-8CB400D0A039}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20316A6A-849B-447A-A783-8F28638B2F5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20316A6A-849B-447A-A783-8F28638B2F5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20316A6A-849B-447A-A783-8F28638B2F5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20316A6A-849B-447A-A783-8F28638B2F5D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1BB8296B-BBD4-41B1-B8E9-CD507CEA68F0}
+	EndGlobalSection
+EndGlobal
